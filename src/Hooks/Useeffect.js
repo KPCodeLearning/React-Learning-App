@@ -3,11 +3,16 @@ import '../CSS/table.css';
 
 function UseEffectHook() {
   const [count, setCount] = useState(0);
+  const [txt, setTxt] = useState("");
 
   useEffect(() => {
     console.log(count);
     document.getElementById("lbl").innerHTML = `You clicked ${count} times`;
   }, [count]);
+
+  function changeEmployeeInfo(e){
+    setTxt([e.target.value]);
+  }
 
   return (
     <div>
@@ -25,6 +30,15 @@ function UseEffectHook() {
       <button onClick={() => setCount((prevCount) => prevCount + 1)}>
         Click {count} times{" "}
       </button>
+
+
+      <p>
+        <label>Employee Name : 
+                <input type="text" name="Name" value={txt} 
+                onChange={changeEmployeeInfo}></input>
+        </label>
+        Name is {txt}
+      </p>
     </div>
   );
 }
@@ -84,7 +98,7 @@ export function UseEffectHookforEmployees() {
               <td>{emp.Salary}</td>
               <td>{emp.IsPermanent ? "Yes" : "No"}</td>
             </tr>
-          )) : "ghj"}
+          )) : <tr><td colspan="5" style={{textAlign:"center"}}><b>Data not found !!</b></td></tr>}
         </tbody>
       </table>
     </div>

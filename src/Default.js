@@ -3,12 +3,14 @@ import logo from './logo.svg';
 
 function Default() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <center><h1>Let's Learn React JS</h1></center>
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    // <div className="App">
+    //   <header className="App-header">
+    <>
+      <center><h1>Let's Learn React JS</h1>
+        <img src={logo} className="App-logo" alt="logo" /></center>
+        </>
+    //     </header> 
+    // </div>
   );
 }
 

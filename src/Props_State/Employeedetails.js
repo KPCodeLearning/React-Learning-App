@@ -19,7 +19,7 @@ class Employeedetails extends React.Component{
       return <div>
       <center><h1>Flow of Props and State</h1></center>
       <div style={{ backgroundColor:"Gray", borderRadius:"40px", border:"3px solid red", padding:"10px"}}>
-        <h1><u>Employee Personal Details</u></h1>
+        <h3><u>Employee Personal Details</u></h3>
       <p>
           Id : <b>{this.props.Id}</b>
       </p>
@@ -60,7 +60,7 @@ class Employeedetails extends React.Component{
 
     render(){
       return <div>
-        <h1>Salary Details</h1>
+        <h3>Salary Details</h3>
   {/* <p>
           <label>Basic Salary : <b>{this.props.BasicSalary}</b></label>
       </p>
@@ -78,7 +78,7 @@ class Employeedetails extends React.Component{
         <label>HRA : <input type="text" defaultValue={this.state.hra} ref="HRA"/></label>
     </p>
     <p>
-        <label>Special Allowance : <input type="text" defaultValue={this.state.sa} ref="SpecialAllowance"/></label>
+        <label>Special Allowance <input type="text" defaultValue={this.state.sa} ref="SpecialAllowance"/></label>
     </p>
     <button onClick={this.updateSalary}>Update</button>
       {/* <Salarybraekup SalaryBreak={this.props.SalaryBreak}></Salarybraekup> */}
@@ -94,7 +94,7 @@ class Employeedetails extends React.Component{
     }
     render(){
       return <div>
-        <h1>Salary Break Details</h1>
+        <h3>Salary Break Details</h3>
         <p>
           <label>Salary Break Allowance : <b>{this.props.SalaryBreak}</b></label>
         </p>

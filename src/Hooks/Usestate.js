@@ -5,7 +5,9 @@ function UseStateHook() {
     const [counter, setCounter] = useState(0);
   
     return (
-      <><center><h1>React Hooks - useState</h1></center>
+      <>
+	  {console.log("uio")}
+	  <center><h1>React Hooks - useState</h1></center>
         <h1>The Counter is {counter}! </h1>
         <p>{counter % 2 == 0 ? 'even!' : 'odd!'}</p>
         <button type="button" onClick={() => setCounter(counter+1)}>Increament</button>

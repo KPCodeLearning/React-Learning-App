@@ -40,6 +40,8 @@ class Component extends React.Component {
 	}
 }
 
+export default Component;
+
 export class Stateexample extends React.Component {
   state = { counter: 0 };
   addEmployee = () => {
@@ -61,5 +63,3 @@ export class Stateexample extends React.Component {
     );
   }
 }
-
-export default Component;
