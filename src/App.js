@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           {/* <div className="sidenav" style={{ display: "flex", height: "100vh" }}>
             <Sidebar>
               <Menu>
