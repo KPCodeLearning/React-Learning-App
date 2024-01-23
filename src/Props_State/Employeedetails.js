@@ -18,7 +18,7 @@ class Employeedetails extends React.Component{
 
       return <div>
       <center><h1>Flow of Props and State</h1></center>
-      <div style={{ backgroundColor:"Gray", borderRadius:"40px", border:"3px solid red", padding:"10px"}}>
+      <div style={{ backgroundColor:"Gray",fontFamily:"ghu", borderRadius:"40px", border:"3px solid red", padding:"10px"}}>
         <h3><u>Employee Personal Details</u></h3>
       <p>
           Id : <b>{this.props.Id}</b>

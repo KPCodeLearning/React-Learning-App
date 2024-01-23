@@ -8,7 +8,7 @@ function UseStateHook() {
       <>
 	  {console.log("uio")}
 	  <center><h1>React Hooks - useState</h1></center>
-        <h1>The Counter is {counter}! </h1>
+        <h3>The Counter is {counter}! </h3>
         <p>{counter % 2 == 0 ? 'even!' : 'odd!'}</p>
         <button type="button" onClick={() => setCounter(counter+1)}>Increament</button>
         <button type="button" onClick={() => setCounter(counter-1)}>Decreament</button></>
@@ -37,7 +37,7 @@ function UseStateHook() {
   
     return (
       <div><center><h1>React Hooks - Multi useState Updation</h1></center>
-        <h1>My {car.brand}</h1>
+        <h3>My {car.brand}</h3>
         <p style={{color:car.color}}>
           It is a {car.color} {car.model} from {car.year}.
         </p>

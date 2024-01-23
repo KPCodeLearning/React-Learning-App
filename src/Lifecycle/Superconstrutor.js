@@ -54,7 +54,7 @@ export class Componentlifecycle extends React.Component {
       return (
         <div>
             <center><h1>Component Life Cycle</h1></center>
-            <h1 style={{ color: this.state.favoritecolor}} >My Favorite Color is {this.state.favoritecolor}</h1>
+            <h3 style={{ color: this.state.favoritecolor}} >My Favorite Color is {this.state.favoritecolor}</h3>
             <button type="button" onClick={this.changeColor}>Change color</button>
             <div id="div1"></div>
             <div id="div2"></div>

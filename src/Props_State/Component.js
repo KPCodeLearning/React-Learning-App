@@ -25,10 +25,10 @@ class Component extends React.Component {
 		return (
 			<div>
 				<center><h1>State with Counter</h1></center>
-				<h1>
+				<h3>
 					The current count is :{" "}
 					{this.state.count}
-				</h1>
+				</h3>
 				<button onClick={this.increment}>
 					Increase
 				</button>

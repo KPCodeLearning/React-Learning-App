@@ -5,6 +5,10 @@ class Parent extends React.Component {
 	constructor(props){
 		super()
 		console.log(props)
+    if(!props.warn)
+    {
+const p = "gh";
+    }
 	}
   render() {
     return (

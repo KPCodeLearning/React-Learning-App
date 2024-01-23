@@ -43,8 +43,7 @@ function CustomHooksWithAPI() {
           ))}
         </tbody>
       </table>
-      
-      <Department />
+
     </div>
   );
 }

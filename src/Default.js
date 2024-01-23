@@ -7,6 +7,7 @@ function Default() {
       <center>
         <h1>Let's Learn React JS</h1>
         <img src={logo} className="App-logo" alt="logo" />
+        
       </center>
     </>
   );

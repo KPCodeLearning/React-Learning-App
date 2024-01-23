@@ -1,14 +1,14 @@
 //import logo from "./logo.svg";
 import "./App.css";
+import "./CSS/SidebarCSS.css";
 import React from "react";
 import {
   HashRouter as Router,
   Route,
   Link,
   Routes,
-  NavLink,
 } from "react-router-dom";
-import "./CSS/SidebarCSS.css";
+
 import Default from "./Default";
 import DemoComponent from "./Props_State/Democomponent";
 import Component, { Stateexample } from "./Props_State/Component";
@@ -20,85 +20,159 @@ import Superconstrutor, { Header } from "./Lifecycle/Superconstrutor";
 import { Componentlifecycle } from "./Lifecycle/Superconstrutor";
 import UseStateHook, { Carinfo, LoginUsingUseStateHook } from "./Hooks/Usestate";
 import UseEffectHook, { UseEffectHookforEmployees } from "./Hooks/Useeffect";
-import Sidebar from "./CSS/Sidebar";
 import UsecontextHook from "./Hooks/Usecontext";
 import { UpdateStateUsecontextHook } from "./Hooks/Usecontext"; 
 import UserefHook from "./Hooks/Useref";
 import UsereducerHook from "./Hooks/Usereducer";
 import CustomHooksWithAPI from "./Hooks/Customehook";
 import NPMCustomHook from "./Hooks/NPMcustomHooks";
-//import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import ReactFeatures from "./Content/ReactFeatures";
+import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import JSX from "./Content/JSX";
+import CreateNewApp from "./Content/CreateNewApp";
 
 function App() {
   
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
         <Router>
-          {/* <div className="sidenav" style={{ display: "flex", height: "100vh" }}>
+          <div className="sidenav" style={{ display: "flex", height: "100vh" }}>
             <Sidebar>
               <Menu>
-                <MenuItem className="menu1" component={<Link to="/" />}>
-                  <h2>React JS</h2>
+                <MenuItem className="menuHeader" component={<Link to="/" />}>
+                  <center>
+                    <h2>React JS</h2>
+                  </center>
                 </MenuItem>
-                <MenuItem>
-                  <Link to="/fn/fn1">Functional Component</Link>
+                <MenuItem
+                  className="menuItem"
+                  component={<Link to="/ReactFeatures" />}
+                >
+                  React Features
                 </MenuItem>
-                <MenuItem className="menuItem" component={<Link to="/fn/fn2" />}> Logout </MenuItem>
+                <MenuItem className="menuItem" component={<Link to="/JSX" />}>
+                  JSX
+                </MenuItem>
+                <MenuItem
+                  className="menuItem"
+                  component={<Link to="/Create-New-App" />}
+                >
+                  Create New App
+                </MenuItem>
+                <MenuItem
+                  className="menuItem"
+                  component={<Link to="/fn/fn1" />}
+                >
+                  Functional Component
+                </MenuItem>
+                <MenuItem
+                  className="menuItem"
+                  component={<Link to="/fn/fn2" />}
+                >
+                  Functional Component
+                </MenuItem>
 
-                <MenuItem> Invoices </MenuItem>
-                <MenuItem element={<Link to="/fn/fn1" />}>
-                  {" "}
-                  Documentation
+                <MenuItem
+                  className="menuItem"
+                  component={<Link to="/Class-Component" />}
+                >
+                  Class Component
                 </MenuItem>
-                <MenuItem element={<Link to="/fn/fn2" />}> Calendar</MenuItem>
-                <MenuItem element={<Link to="/Class-Component" />}>
-                  {" "}
-                  E-commerce
+                <SubMenu
+                  label="Props & State"
+                  className="menuItem"
+                  component={<Link to="/Props" />}
+                >
+                  <MenuItem component={<Link to="/Props/props" />}>
+                    Props
+                  </MenuItem>
+                  <MenuItem
+                    component={<Link to="/Props/props-in-multilevelclass" />}
+                  >
+                    Props in Heirarchy{" "}
+                  </MenuItem>
+                  <MenuItem component={<Link to="/State/state" />}>
+                    State
+                  </MenuItem>
+                  <MenuItem component={<Link to="/State/state&counter" />}>
+                    State 1
+                  </MenuItem>
+                  <MenuItem
+                    component={<Link to="/State/Flow of State and Props" />}
+                  >
+                    Flow of State and Props
+                  </MenuItem>
+                </SubMenu>
+                <MenuItem
+                  className="menuItem"
+                  component={<Link to="/Component-LifeCycle/Constructor" />}
+                >
+                  Constructor
                 </MenuItem>
-                <SubMenu label="Charts" className="menuItem">
-                  <MenuItem> Timeline Chart </MenuItem>
-                  <MenuItem> Bubble Chart </MenuItem>
+                <MenuItem
+                  className="menuItem"
+                  component={
+                    <Link to="/Component-LifeCycle/Life-Cycle-Phases" />
+                  }
+                >
+                  Component's Life Cycle
+                </MenuItem>
+                <SubMenu
+                  label="React Hooks"
+                  className="menuItem"
+                  component={<Link to="/Hooks" />}
+                >
+                  <MenuItem component={<Link to="/Hooks-useState/useState" />}>
+                    useState
+                  </MenuItem>
+                  <MenuItem
+                    component={<Link to="/Hooks-useState/multiuseEffect" />}
+                  >
+                    useEffect
+                  </MenuItem>
+                  <MenuItem
+                    component={
+                      <Link to="/Hooks-useState/Login-form-useState" />
+                    }
+                  >
+                    Login using useState
+                  </MenuItem>
+                  <MenuItem
+                    component={<Link to="/Hooks-useEffect/useEffect" />}
+                  >
+                    useEffect
+                  </MenuItem>
+                  <MenuItem
+                    component={<Link to="/Hooks-useEffect/useEffectInAPI" />}
+                  >
+                    useEffectInAPI
+                  </MenuItem>
                 </SubMenu>
-                <SubMenu label="Wallets">
-                  <MenuItem>Current Wallet</MenuItem>
-                  <MenuItem>Savings Wallet</MenuItem>
+                <SubMenu
+                  label="Custom Hooks"
+                  className="menuItem"
+                  component={<Link to="/CustomHooks" />}
+                >
+                  <MenuItem component={<Link to="/customhooks/customhooks" />}>
+                    Custom Hooks
+                  </MenuItem>
+                  <MenuItem
+                    component={<Link to="/customhooks/NPM-custom-hook" />}
+                  >
+                    NPM Custom Hooks
+                  </MenuItem>
                 </SubMenu>
-                <MenuItem> Transactions </MenuItem>
-                <SubMenu label="Settings">
-                  <MenuItem> Account </MenuItem>
-                  <MenuItem> Privacy </MenuItem>
-                  <MenuItem> Notifications </MenuItem>
-                </SubMenu>
-                <MenuItem> Logout </MenuItem>
               </Menu>
             </Sidebar>
-          </div> */}
+          </div>
 
-          {/* <div className="sidenav">
-            
-            <Link to="fn">Functional Component</Link>
-            <Link to="fn1">Functional Component - 1</Link>
-            <Link to="clscomp">Class Component</Link>
-            <Link to="/props">Props</Link>
-            <NavLink to="/props1">Props in Heirarchy</NavLink>
-            <NavLink to="/state">State</NavLink>
-            <NavLink to="/state1">State 1</NavLink>
-            <NavLink to="/state_props">Flow of State and Props</NavLink>
-            <NavLink to="/superconstructor">Super() vs Super(props)</NavLink>
-            <NavLink to="/componentlifecycle">Component Life Cycle</NavLink>
-            <NavLink to="/usestate">Hooks - useState</NavLink>
-            <NavLink to="/multiusestate">Hooks - Multiple useState</NavLink>
-            <NavLink to="/loginform">Login form useState</NavLink>
-            <NavLink to="/useEffectHook">Hooks - useEffect</NavLink>
-            <NavLink to="/useEffectHookAPI">Hooks - useEffect with API</NavLink>
-          </div> */}
-          {/* <div className="main"> */}
-
-          <Sidebar/>
-          <div className="main">
+          <div className="App-header">
             <Routes>
               <Route path="/" element={<Default />} />
+              <Route path="/ReactFeatures" element={<ReactFeatures />} />
+              <Route path="/JSX" element={<JSX />} />
+              <Route path="/Create-New-App" element={<CreateNewApp />} />
               <Route
                 path="/fn/fn1"
                 element={<Employee name="KP" salary="123456789" />}
@@ -117,7 +191,7 @@ function App() {
               ></Route>
               <Route
                 path="/Props/props-in-multilevelclass"
-                element={<Parent Name="12" Location="34" />}
+                element={<Parent Name="12" Location="34" warn="true" />}
               />
               <Route path="/State/state" element={<Stateexample />}></Route>
               <Route
@@ -165,7 +239,9 @@ function App() {
               />
               <Route
                 path="/Hooks-useEffect/useEffectInAPI"
-                element={<UseEffectHookforEmployees />}
+                element={
+                    <UseEffectHookforEmployees />
+                }
               />
               <Route
                 path="/Hooks-usecontext/usecontext"
@@ -175,10 +251,7 @@ function App() {
                 path="/Hooks-useContext/updtae-state-with-useContext"
                 element={<UpdateStateUsecontextHook />}
               />
-              <Route
-                path="/Hooks-useRef/useRef"
-                element={<UserefHook />}
-              />
+              <Route path="/Hooks-useRef/useRef" element={<UserefHook />} />
               <Route
                 path="/Hooks-useReducer/useReducer"
                 element={<UsereducerHook />}
